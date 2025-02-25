@@ -23,6 +23,7 @@ https://gemini.google.com
 https://www.deepseek.com
 https://chat.qwenlm.ai
 https://chat.mistral.ai
+https://grok.com
 
 ------------------
 
