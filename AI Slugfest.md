@@ -143,7 +143,7 @@ ChatGPT o1 Result ----------------------
 Below is a step‐by‐step, minimal‐move solution using the rules and BFS logic described. The final sequence requires 8 moves.
 
 Preamble
-
+```
 Starting Position
     •    R1: []
     •    R2: [(Green, "bottom"), (Red, "top")]
@@ -224,3 +224,4 @@ Verification of Constraints
     4.    The solution terminates only upon reaching the exact goal state.
 
 Thus, this sequence satisfies all the rules and achieves the goal in the shortest number of moves.
+```
