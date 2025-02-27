@@ -227,3 +227,6 @@ Verification of Constraints
 
 Thus, this sequence satisfies all the rules and achieves the goal in the shortest number of moves.
 ```
+
+![Screenshot](https://github.com/Noemata/DeepSeek-Experiments/blob/main/Ending%20Position%20(Goal%20State).jpg)
+
