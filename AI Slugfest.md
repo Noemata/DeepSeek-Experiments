@@ -16,7 +16,7 @@ In conclusion, all the publicly facing (free) versions of AI have frontal lobe i
 
 This is something I suspected from the start of the AI hype cycle.  AI will kill us not because of its capacity to take over the world, but because of its fundamental inability to think safely.  For now.
 
-More recently, Grok 3 was tested.  If evaluated in human terms, it would be deemed significantly impared.
+More recently, Grok 3 was tested.  If evaluated in human terms, it would be deemed significantly impared.  Similarly, Claude 3.7 needed repeated correction before achieving its goal in 12 poorly executed moves.
 
 # Product Urls:
 
@@ -26,6 +26,7 @@ https://www.deepseek.com
 https://chat.qwenlm.ai
 https://chat.mistral.ai
 https://grok.com
+https://claude.ai
 
 ------------------
 
