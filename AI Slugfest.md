@@ -4,7 +4,7 @@ The Tower of London Test was developed to detect executive function disorders in
 
 # Summary of Publicly Facing AI Results
 
-ChatGPT (free) gets the wrong answer in 5 steps even though it "thinks" the answer is incorrect.  DeepSeek appears to go insane while trying to solve the problem, ultimately producing an incorrect answer though it is the only AI to execute in the correct number of steps.  Qwen flubs it completely.  Mistral reaches an incorrect result concluding that it is correct.  Gemini solves the problem in 37 steps!
+ChatGPT (free) gets the wrong answer in 5 steps even though it "thinks" the answer is correct.  DeepSeek appears to go insane while trying to solve the problem, ultimately producing an incorrect answer though it is the only AI to execute in the correct number of steps.  Qwen flubs it completely.  Mistral reaches an incorrect result concluding that it is correct.  Gemini solves the problem in 37 steps!
 
 The problem is constructed in a manner that makes it difficult for the AI to use conventional problem solving strategies.  Requiring the bottom disk to be located at the start of the list of disks proved to be particularly difficult for the AI's to cope with. 
 
