@@ -18,6 +18,10 @@ This is something I suspected from the start of the AI hype cycle.  AI will kill
 
 More recently, Grok 3 was tested.  If evaluated in human terms, it would be deemed significantly impared.  Similarly, Claude 3.7 needed repeated correction before achieving its goal in 12 poorly executed moves.
 
+The last AI that was tested is Microsoft's Copilot.  The free version fails immediately and quickly drifts into what can only be described as an insane dialog.  Likewise for the paid version, except that its first two attempts are remotely valid. Unfortunately the paid version quickly drifts into completely incoherent "thinking" despite efforts to correct its approach.
+
+Clearly, vendors are purposely maintaining a capability gap between free and paid versions of the products.
+
 # Product Urls:
 
 https://chatgpt.com
@@ -27,6 +31,7 @@ https://chat.qwenlm.ai
 https://chat.mistral.ai
 https://grok.com
 https://claude.ai
+https://copilot.microsoft.com
 
 ------------------
 
