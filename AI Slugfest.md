@@ -20,7 +20,7 @@ More recently, Grok 3 was tested.  If evaluated in human terms, it would be deem
 
 The last AI that was tested is Microsoft's Copilot.  The free version fails immediately and quickly drifts into what can only be described as an insane dialog.  Likewise for the paid version, except that its first two attempts are remotely valid. Unfortunately the paid version quickly drifts into completely incoherent "thinking" despite efforts to correct its approach.
 
-Clearly, vendors are purposely maintaining a capability gap between free and paid versions of the products.
+Clearly, vendors are purposely maintaining a capability gap between free and paid versions of their products.
 
 # Product Urls:
 
