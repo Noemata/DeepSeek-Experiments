@@ -1,3 +1,9 @@
+# Addendum
+
+After testing more recent developments (As of July 2025) that are not yet available to the public, the latest AI model(s) are able to solve unconventional or even contrived formulations of both existing and novel problems like this problem.  Well before the end of next year (2026) such models will become generally available.  It's unclear how this type of thinking problem was solved.  Hopefully, one of the Open Source variants will duplicate this capability.
+
+Results will be posted once permisison to do so is given.
+
 # Overview
 
 The Tower of London Test was developed to detect executive function disorders in humans.  What happens when we use the same test with the current crop of AI engines in 2025?  Short answer, the consumer facing (free) versions of the engines listed below all failed.  Longer answer, when tested with the paid version of ChatGPT (o1), 8 steps were used to get to a valid answer, however this is not the optimal result.  A smart 9 year old could beat ChatGPT o1.
