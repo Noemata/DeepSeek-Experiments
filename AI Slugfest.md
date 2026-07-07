@@ -10,6 +10,8 @@ The Tower of London Test now has two variations.  One intended to validate the c
 
 Testing was done on an M1 Mac Studio having 64GB of unified memory.  Even this setup has plenty of froom to stretch.  Here's a summary of what to consider.
 
+Final note, it is still possible to change the construction details of the puzzle in a way that will cause all frontier models to fail spectacularly.  Novelty and deep abstraction highlet the weakness of using training alone as a way to improve LLMs.
+
 ## 1. The 31B Parameter Threshold: Pure "Lookahead" Capacity
 In smaller LLM sizes (like 7B or 9B), the model simply lacks the density of attention heads required to maintain a complex internal state machine while simultaneously generating text.
 
