@@ -1,6 +1,6 @@
 # Addendum (2026)
 
-Exactly one year later (July 2025), almost all fontier AI models perfectly solve the Tower of London Test.  Now a new "frontier" is coming into view, the AI islands consisting of capable local models that can run in memory constrained systems.  The bleeding edge of LLM compression shifts the focus away from looking at the model as a static block of data, and instead treats it as a dynamic system where we can isolate and extract the pathways that actually "light up" for a specific problem domain.
+Exactly one year later (July 2026), almost all fontier AI models perfectly solve the Tower of London Test.  Now a new "frontier" is coming into view, the AI islands consisting of capable local models that can run in memory constrained systems.  The bleeding edge of LLM compression shifts the focus away from looking at the model as a static block of data, and instead treats it as a dynamic system where we can isolate and extract the pathways that actually "light up" for a specific problem domain.
 
 Using Activation-Driven Shrinking/Pruning and Activation-Aware Post Training, we can expect to see the evolution of models that are even more capable than the biggest frontier models that will ever be developed because we will extract the activation layers that target a given problem domain, pruning and stripping away everything that is superfluous.  Some of these SME (subject matter expert) models will run on relatively small memory footprints (under 8 GB), yet have capabilities that significantly exceed LLMs.
 
