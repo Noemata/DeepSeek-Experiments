@@ -1,3 +1,44 @@
+# Addendum (2026)
+
+Exactly one year later (July 2025), almost all fontier AI models perfectly solve the Tower of London Test.  Now a new "frontier" is coming into view, the AI islands consisting of capable local models that can run in memory constrained systems.  The bleeding edge of LLM compression shifts the focus away from looking at the model as a static block of data, and instead treats it as a dynamic system where we can isolate and extract the pathways that actually "light up" for a specific problem domain.
+
+Using Activation-Driven Shrinking/Pruning and Activation-Aware Post Training, we can expect to see the evolution of models that are even more capable than the biggest frontier models that will ever be developed because we will extract the activation layers that target a given problem domain, pruning and stripping away everything that is superfluous.  Some of these SME (subject matter expert) models will run on relatively small memory footprints (under 8 GB), yet have capabilities that significantly exceed LLMs.
+
+Until then current approaches such as Mixture of Experts (MoE) Subnetwork Extraction, Dynamic Activation Sparsity (Contextual Dropout),low-rank factorization, and simpler compression approaches such as quantization and Knowledge Distillation will continue so evolve.
+
+The Tower of London Test now has two variations.  One intended to validate the capabilities of smart AIs.  The other will confirm whether a dumb AI is minimally viable (safe to use). It is now possible to get significant leverage from small models.  However, prompts must be carefully constructed to work within the bounds of the capabilities of these lesser models.
+
+Testing was done on an M1 Mac Studio having 64GB of unified memory.  Even this setup has plenty of froom to stretch.  Here's a summary of what to consider.
+
+## 1. The 31B Parameter Threshold: Pure "Lookahead" Capacity
+In smaller LLM sizes (like 7B or 9B), the model simply lacks the density of attention heads required to maintain a complex internal state machine while simultaneously generating text.
+
+The Attention "Budget": When an AI reads the waypoint "stack BOTH Blue and Red into R1 temporarily," a smaller model allocates its attention to the immediate instruction (moving the disks).
+
+The 31B Difference: At 31 billion parameters, the model has enough layer depth to dedicate specific attention heads to secondary, unprompted lookahead tracks. It can evaluate the consequence of Move 2 on Move 5 before it even outputs the text for Move 1. Smaller models are strictly "greedy" token-by-token predictors; 31B is typically the sweet spot where true spatial planning emerges.
+
+## 2. The mxfp8 Factor: Preserving "Soft" Logic Over Standard INT8
+
+Quantization is usually the silent killer of logic puzzles. When a model is crushed down to standard INT4 or INT8, its weights are forced into rigid, uniform integer buckets. This destroys the subtle "nuance" in the attention layers.
+
+The mxfp8 (Microscaling Formats FP8) variant utilizes an entirely different math paradigm:
+
+* Instead of uniform quantization, it uses shared scale factors across small blocks of coefficients.
+* This allows the model to maintain a higher dynamic range for floating-point math, even at an 8-bit memory footprint.
+
+In a logic puzzle, the difference between a valid move and an invalid move might rely on a incredibly subtle attention weight. Standard integer quantization flattens those subtle differences out, making the model blind to the trap at Move 2. mxfp8 preserves those delicate mathematical gradients, allowing the model to "see" the trap.
+
+## 3. The MLX Advantage on Unified Memory
+Because you are running native MLX variants on Apple Silicon's unified memory architecture, the model isn't bottlenecked by the slow transfer speeds between a traditional CPU and GPU.
+
+When the 31B mxfp8 model needs to rapidly shift its attention from the Global Plan down to the Current Move array state, the massive bandwidth of the unified memory allows it to fetch those cross-attention weights instantly.
+
+On a system with split VRAM/RAM, the slight latency overhead can actually degrade the coherence of long context reasoning paths during local execution.
+
+Local models that were examined inclued Qwen 3.6 35B, llama 3.3 70B, Qwen 3 Coder and last but no least several variations of Gemma 4, with a focus on the 31B parameter version.
+
+Using at least 8 bits or 8 bit floats, Qwen 3.6 and Qwen 3 coder were both able to correctly solve the "dumb AI" version of the prompt.  Gemma 4 required very specifc variants of of the model to get the correct result.  Only Gemma 4 was able to have some measure of success with the "smart AI" version of the prompt.  Gemma 4 was significantly better at coding a Swift programming challenge correctly.  None of the other models tested on the coding challenge were viable.
+
 # Addendum (2025)
 
 After testing more recent developments (As of July 2025) that are not yet available to the public, the latest AI model(s) are able to solve unconventional or even contrived formulations of both existing and novel problems like this one.  Well before the end of next year (2026) such models will become generally available.  It's unclear how this type of thinking problem was solved.  Hopefully, one of the Open Source variants will duplicate this capability.
