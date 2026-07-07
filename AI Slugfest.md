@@ -1,4 +1,4 @@
-# Addendum
+# Addendum (2025)
 
 After testing more recent developments (As of July 2025) that are not yet available to the public, the latest AI model(s) are able to solve unconventional or even contrived formulations of both existing and novel problems like this one.  Well before the end of next year (2026) such models will become generally available.  It's unclear how this type of thinking problem was solved.  Hopefully, one of the Open Source variants will duplicate this capability.
 
@@ -38,6 +38,109 @@ https://chat.mistral.ai
 https://grok.com
 https://claude.ai
 https://copilot.microsoft.com
+
+------------------
+
+# Formal Specification: Tower of London (dumb AI)
+
+## 1. System Definition
+The environment consists of 3 stacks (rods) labeled `R1`, `R2`, and `R3`.
+There are 3 elements (disks) labeled `Red`, `Green`, and `Blue`.
+- **State Representation:** Lists represent rods from bottom to top. `['Green', 'Red']` means Green is on the bottom, Red is on the top.
+
+## 2. Constraints (Capacities & Movement)
+- **Capacities:** `R1` max is 3. `R2` max is 2. `R3` max is 1.
+- **CRITICAL RULE - Topmost Access Only:** You may ONLY move the topmost disk (the rightmost item in a list). You absolutely cannot move a disk if another disk is on top of it.
+- **No Cycling:** You cannot immediately reverse your last move.
+
+## 3. States
+- **Initial State (S_0):** `R1:[]`, `R2:['Green', 'Red']`, `R3:['Blue']`
+- **Goal State (S_G):** `R1:['Green', 'Blue']`, `R2:['Red']`, `R3:[]`
+
+## 4. Strategic Waypoints (Mandatory Logic)
+To achieve the goal in exactly 7 moves, you must structure your logic around these sequential waypoints. Do not skip any phases.
+* **Phase 1 (Uncover Green):** 'Green' is trapped under 'Red'. Your first priority is to get 'Red' out of the way. Since 'R3' is small, you must stack BOTH 'Blue' and 'Red' into 'R1' temporarily.
+* **Phase 2 (Park Green):** Once 'Green' is the topmost and only disk on 'R2', move it to the empty 'R3' to keep it safe. 
+* **Phase 3 (Evacuate R1):** 'Green' must eventually go to the bottom of 'R1'. Therefore, 'R1' must be completely empty. Move the disks currently in 'R1' over to 'R2' so they stack in the correct order for the final goal.
+* **Phase 4 (Final Assembly):** With 'R1' completely empty, move 'Green' to the bottom of 'R1', followed by 'Blue'.
+
+---
+
+## 5. Required Output
+Before outputting the final sequence, use a `<thinking>` block to map out your 7 moves, ensuring they hit every Phase in the Strategic Waypoints without exceeding rod capacities.
+
+After thinking, output the 7 moves exactly in this format. Do not use code blocks.
+
+### **Initial State**
+* **R1:** `[]`
+* **R2:** `[(Green, "bottom"), (Red, "top")]`
+* **R3:** `[(Blue, "top")]`
+
+### **Move 1: [Color] from [Source] to [Destination]**
+* **R1:** `[...]`
+* **R2:** `[...]`
+* **R3:** `[...]`
+
+*(Continue for all 7 moves)*
+
+------------------
+
+# Formal Specification: Tower of London (smart AI)
+
+## 1. System Definition
+The environment consists of 3 stacks (rods) labeled `R1`, `R2`, and `R3`.
+There are 3 elements (disks) labeled `Red`, `Green`, and `Blue`.
+- **State Representation:** A state is defined as a tuple of three lists: `(R1, R2, R3)`.
+- **Stack Logic:** The rightmost element of a list is the "top" of the stack.
+
+## 2. Constraints (Capacities)
+Each stack has a strict maximum length:
+- `MAX_LEN(R1) = 3`
+- `MAX_LEN(R2) = 2`
+- `MAX_LEN(R3) = 1`
+
+## 3. States
+- **Initial State (S_0):** `([], ['Green', 'Red'], ['Blue'])`
+- **Goal State (S_G):** `(['Green', 'Blue'], ['Red'], [])`
+
+## 4. Valid Transition Function (Move Rules)
+A move is defined as `MOVE(source, destination)`. A move is strictly valid if and only if both conditions are met:
+1. **Source is not empty:** `len(source) > 0`
+2. **Destination is not full:** `len(destination) < MAX_LEN(destination)`
+3. **Topmost Access Only:** Only the topmost element of a stack (the rightmost item in the list representation) can be selected for a move. Elements beneath the top element cannot be moved.
+
+**Execution Logic:**
+If a move is valid, the state updates via standard stack operations:
+- `element = source.pop()` *(Removes and returns the rightmost element)*
+- `destination.append(element)` *(Places the element at the rightmost position)*
+
+## 5. Objective
+Using Breadth-First Search (BFS) logic, find the shortest sequence of `MOVE(source, destination)` actions required to transition the system from `S_0` to `S_G`. 
+- Track visited states to prevent loops.
+
+---
+
+## 6. Required Output Format
+You must output the solution EXACTLY in the following markdown format. Do not use code blocks for the output. Even though you are calculating using lists, you must translate the states back into the following specific format for presentation:
+
+### **Initial State**
+* **R1:** `[]`
+* **R2:** `[(Green, "bottom"), (Red, "top")]`
+* **R3:** `[(Blue, "top")]`
+
+### **Move 1: [Disk Color] from [Source Rod] to [Destination Rod]**
+*[One sentence explaining the strategic reason for this move in italics.]*
+* **R1:** `[...]`
+* **R2:** `[...]`
+* **R3:** `[...]`
+
+*(Continue this exact format for all subsequent moves).*
+
+**Formatting Rules for Rod Lists in the Output:**
+- If a rod is empty, output: `[]`
+- If a rod has 1 disk, output: `[(Color, "top")]`
+- If a rod has 2 disks, output: `[(BottomColor, "bottom"), (TopColor, "top")]`
+
 
 ------------------
 
