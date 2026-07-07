@@ -4,7 +4,7 @@ Exactly one year later (July 2026), almost all frontier AI models perfectly solv
 
 Using Activation-Driven Shrinking/Pruning and Activation-Aware Post Training, we can expect to see the evolution of models that are even more capable than the biggest frontier models that will ever be developed because we will extract the activation layers that target a given problem domain, pruning and stripping away everything that is superfluous.  Some of these SME (subject matter expert) models will run on relatively small memory footprints (under 8 GB), yet have capabilities that significantly exceed what the best LLMs offer today.
 
-Until then current approaches such as Mixture of Experts (MoE) Subnetwork Extraction, Dynamic Activation Sparsity (Contextual Dropout),low-rank factorization, and simpler compression approaches such as quantization and Knowledge Distillation will continue so evolve.
+Until then current approaches such as Mixture of Experts (MoE) Subnetwork Extraction, Dynamic Activation Sparsity (Contextual Dropout), Low-Rank Factorization and simpler compression approaches such as quantization and Knowledge Distillation will continue to evolve.
 
 The Tower of London Test now has two variations.  One intended to validate the capabilities of smart AIs.  The other will confirm whether a dumb AI is minimally viable (safe to use). It is now possible to get significant leverage from small models.  However, prompts must be carefully constructed to work within the bounds of the capabilities of these lesser models.
 
