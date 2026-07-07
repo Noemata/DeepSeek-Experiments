@@ -1,16 +1,16 @@
 # Addendum (2026)
 
-Exactly one year later (July 2026), almost all frontier AI models perfectly solve the Tower of London Test.  Now a new "frontier" is coming into view, the AI islands consisting of capable local models that can run in memory constrained systems.  The bleeding edge of LLM compression shifts the focus away from looking at the model as a static block of data, and instead treats it as a dynamic system where we can isolate and extract the pathways that actually "light up" for a specific problem domain.
+Exactly one year later (July 2026), almost all frontier AI models perfectly solve the Tower of London Test.  Now a new "frontier" is coming into view, the AI islands consisting of capable local models that can run in memory-constrained systems.  The bleeding edge of LLM compression shifts the focus away from looking at the model as a static block of data, and instead treats it as a dynamic system where we can isolate and extract the pathways that actually "light up" for a specific problem domain.
 
 Using Activation-Driven Shrinking/Pruning and Activation-Aware Post Training, we can expect to see the evolution of models that are even more capable than the biggest frontier models that will ever be developed because we will extract the activation layers that target a given problem domain, pruning and stripping away everything that is superfluous.  Some of these SME (subject matter expert) models will run on relatively small memory footprints (under 8 GB), yet have capabilities that significantly exceed what the best LLMs offer today.
 
-Until then current approaches such as Mixture of Experts (MoE) Subnetwork Extraction, Dynamic Activation Sparsity (Contextual Dropout), Low-Rank Factorization and simpler compression approaches such as quantization and Knowledge Distillation will continue to evolve.
+Until then, current approaches such as Mixture of Experts (MoE) Subnetwork Extraction, Dynamic Activation Sparsity (Contextual Dropout), Low-Rank Factorization and simpler compression approaches such as quantization and Knowledge Distillation will continue to evolve.
 
-The Tower of London Test now has two variations.  One intended to validate the capabilities of smart AIs.  The other will confirm whether a dumb AI is minimally viable (safe to use). It is now possible to get significant leverage from small models.  However, prompts must be carefully constructed to work within the bounds of the capabilities of these lesser models.
+The Tower of London Test now has two variations: One intended to validate the capabilities of smart AIs.  The other will confirm whether a dumb AI is minimally viable (safe to use). It is now possible to get significant leverage from small models.  However, prompts must be carefully constructed to work within the bounds of the capabilities of these lesser models.
 
 Testing was done on an M1 Mac Studio having 64GB of unified memory.  Even this setup has plenty of room to stretch.  Here's a summary of what to consider.
 
-Final note, it is still possible to change the construction details of the puzzle in a way that will cause all frontier models to fail spectacularly.  Novelty and deep abstraction highlet the weakness of using training alone as a way to improve LLMs.
+Final note: it is still possible to change the construction details of the puzzle in a way that will cause all frontier models to fail spectacularly.  Novelty and deep abstraction highlite the weakness of using training alone as a way to improve LLMs.
 
 ## 1. The 31B Parameter Threshold: Pure "Lookahead" Capacity
 In smaller LLM sizes (like 7B or 9B), the model simply lacks the density of attention heads required to maintain a complex internal state machine while simultaneously generating text.
