@@ -8,7 +8,7 @@ Until then current approaches such as Mixture of Experts (MoE) Subnetwork Extrac
 
 The Tower of London Test now has two variations.  One intended to validate the capabilities of smart AIs.  The other will confirm whether a dumb AI is minimally viable (safe to use). It is now possible to get significant leverage from small models.  However, prompts must be carefully constructed to work within the bounds of the capabilities of these lesser models.
 
-Testing was done on an M1 Mac Studio having 64GB of unified memory.  Even this setup has plenty of froom to stretch.  Here's a summary of what to consider.
+Testing was done on an M1 Mac Studio having 64GB of unified memory.  Even this setup has plenty of room to stretch.  Here's a summary of what to consider.
 
 Final note, it is still possible to change the construction details of the puzzle in a way that will cause all frontier models to fail spectacularly.  Novelty and deep abstraction highlet the weakness of using training alone as a way to improve LLMs.
 
