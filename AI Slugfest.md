@@ -37,9 +37,9 @@ When the 31B mxfp8 model needs to rapidly shift its attention from the Global Pl
 
 On a system with split VRAM/RAM, the slight latency overhead can actually degrade the coherence of long context reasoning paths during local execution.
 
-Local models that were examined inclued Qwen 3.6 35B, llama 3.3 70B, Qwen 3 Coder and last but no least several variations of Gemma 4, with a focus on the 31B parameter version.
+Local models that were examined included Qwen 3.6 35B, llama 3.3 70B, Qwen 3 Coder and last but not least, several variations of Gemma 4, with a focus on the 31B parameter version.
 
-Using at least 8 bits or 8 bit floats, Qwen 3.6 and Qwen 3 coder were both able to correctly solve the "dumb AI" version of the prompt.  Gemma 4 required very specifc variants of of the model to get the correct result.  Only Gemma 4 was able to have some measure of success with the "smart AI" version of the prompt.  Gemma 4 was significantly better at coding a Swift programming challenge correctly.  None of the other models tested on the coding challenge were viable.
+Using at least 8 bits or 8 bit floats, Qwen 3.6 and Qwen 3 Coder were both able to correctly solve the "dumb AI" version of the prompt.  Gemma 4 required very specifc variants of the model to get the correct result.  Only Gemma 4 was able to have some measure of success with the "smart AI" version of the prompt.  Gemma 4 was significantly better at coding a Swift programming challenge correctly.  None of the other models tested on the coding challenge were viable.
 
 # Addendum (2025)
 
